@@ -25,7 +25,7 @@ All you have to worry about is three methods: `put`, `get`, `delete`. You can st
 TattooDB uses SQLite as the underlying storage mechanism by default, but this can be overridden and a custom implementation provided if you would rather use something else (such as manually writing to disk).
 
 As this is a document database, you will have to be mindful about how you design your object model. There are many "NoSQL" 
-database design resources on the web, such as this one: http://ayende.com/blog/3897/designing-a-document-database
+schema design resources on the web, but the basic idea is that you design your data model to encapsulate an entire document in a record. You would usually just "Denormalize" everything to be a part of the object graph, and thus everything would be stored in that same record. Of course, nothing is stopping you from storing the ID to another record stored in another repository.
 
 *Installation*
 Currently, you can use this library by simply cloning (or downloading) the repository and adding it to your workspace.
